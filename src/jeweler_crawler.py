@@ -1,6 +1,7 @@
 from jeweler_api import JewelerAPI
 from crawled_data import CrawledData
 from jeweler_api_utils import JewelerAPIUtils
+from writer import Writer
 
 
 class JewelerCrawler:
@@ -9,6 +10,7 @@ class JewelerCrawler:
         self.__api = JewelerAPI()
         self.__api_utils = JewelerAPIUtils()
         self.__run()
+        self.__writer = Writer(self.__crawled_data)
 
     def __get_all_stores(self):
         response = self.__api.get_stores()

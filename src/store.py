@@ -4,7 +4,7 @@ class Store:
         self.business_name = business_name
         self.town = town
         self.phone_number = phone_number
-        self.scraped_at = None
+        self.scraped_at = scraped_at
 
     def get_metadata(self):
         return {
