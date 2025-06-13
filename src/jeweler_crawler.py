@@ -1,8 +1,13 @@
 from jeweler_api import JewelerAPI
+from crawled_data import CrawledData
+from jeweler_api_utils import JewelerAPIUtils
+
 
 class JewelerCrawler:
     def __init__(self):
+        self.__crawled_data = CrawledData()
         self.__api = JewelerAPI()
+        self.__api_utils = JewelerAPIUtils()
         self.__run()
 
     def __get_all_stores(self):
@@ -13,10 +18,11 @@ class JewelerCrawler:
 
         # parse response
         for store in response:
-            print(store.get('Title'))
+            self.__crawled_data.add_store(self.__api_utils.get_store_data(store))
 
     def __run(self):
         self.__get_all_stores()
+
 
 if __name__ == '__main__':
     JewelerCrawler()
