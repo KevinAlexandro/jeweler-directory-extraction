@@ -4,7 +4,7 @@ A Python crawler that extracts jeweler directory information from the National A
 
 ## Description
 
-This tool searches for jewelers within a specified radius of Birmingham, UK (by default), focusing on "Designer craftsperson" jewelers that target consumers. The crawler fetches up to 100 results and saves them to timestamped files in a `data` directory.
+This tool searches for jewelers within a specified radius of Birmingham, UK (by default), focusing on "Designer craftsperson" jewelers that target consumers. The crawler all the results and saves them to timestamped files in a `data` directory.
 
 ## Installation
 
