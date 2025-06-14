@@ -14,7 +14,7 @@ class Writer:
         """
         self.crawled_data = crawled_data
         self.data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
-            
+
         # Ensure the data directory exists
         if not os.path.exists(self.data_dir):
             os.makedirs(self.data_dir)
